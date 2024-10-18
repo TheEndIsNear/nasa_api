@@ -9,8 +9,11 @@ defmodule NasaAPI.Client.WebClient do
   @impl true
   def create_image(nasa_image_url) do
     case Req.get(nasa_image_url) do
-      {:ok, %{body: body}} ->
+      {:ok, %Req.Response{status: 200, body: body}} ->
         Image.create(body)
+
+      {:ok, %Req.Response{status: 404}} ->
+        {:error, raise("Not Found")}
 
       {:error, reason} ->
         {:error, reason}

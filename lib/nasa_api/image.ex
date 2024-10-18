@@ -22,7 +22,7 @@ defmodule NasaAPI.Image do
         "copyright" => copyright,
         "date" => date,
         "explanation" => explanation,
-        "hd_url" => hd_url,
+        "hdurl" => hd_url,
         "media_type" => media_type,
         "service_version" => service_version,
         "title" => title,
