@@ -2,17 +2,17 @@ defmodule NasaAPI.Client.TestClient do
   @moduledoc """
   Test client for mocking the behavior
   """
-  @behaviour NasaAPI.Client.WebClient
+  @behaviour NasaAPI.Client.NasaClients
 
-  @impl true
+  alias NasaAPI.Image
+
   def create_image(_url) do
+    {:ok, %Image{}}
   end
 
-  @impl true
-  def fetch_hd_image(image) do
+  def fetch_hd_image(_image) do
   end
 
-  @impl true
-  def fetch_hd_image(image) do
+  def fetch_image(_image) do
   end
 end
