@@ -19,6 +19,6 @@ defmodule NasaApi do
     |> client().fetch_image()
   end
 
-  defp api_key, do: Application.get_env(:nasa_api, :api_key)
+  defp api_key, do: Application.get_env(:nasa_api, :api_key, "DEMO_KEY")
   defp client(), do: @client
 end

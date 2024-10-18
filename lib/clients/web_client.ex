@@ -15,6 +15,9 @@ defmodule NasaAPI.Client.WebClient do
       {:ok, %Req.Response{status: 404}} ->
         {:error, raise("Not Found")}
 
+      {:ok, %Req.Response{status: 403}} ->
+        {:error, raise("Invalid API Key")}
+
       {:error, reason} ->
         {:error, reason}
     end
