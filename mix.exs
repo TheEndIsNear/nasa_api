@@ -21,6 +21,7 @@ defmodule NasaApi.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:ecto, "~> 3.0"},
       {:igniter, "~> 0.6", only: [:dev, :test]},
       {:req, "~> 0.5.0"},
       {:dialyxir, "~> 1.4.4", only: :dev, runtime: false},
